@@ -213,7 +213,7 @@ export const projects = [
     id: 6,
     name: 'Amazon Clone',
     overview: 'E-commence website',
-    isLive: false,
+    isLive: true,
     images: [...Amazon],
     date: '2023 MAY',
     techStack: [
