@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
+    "preview": "vite preview --port 8080",
     "lint": "eslint src/**/*.{jsx,js,json}",
     "lint:fix": "eslint --fix src/**/*.{js,jsx,json}",
     "format": "prettier --write src/**/*.{js,jsx,css,md,json} --config ./.prettierrc"

@@ -41,6 +41,7 @@ const Carousel = ({ images }) => {
               src={images[currentImage]}
               alt={'project'}
               className='absolute z-10 h-full w-full object-contain'
+              loading='lazy'
             />
           </motion.div>
         </AnimatePresence>

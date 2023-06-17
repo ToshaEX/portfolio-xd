@@ -5,7 +5,7 @@ import { experienceData } from './data.js';
 
 const ExperiencePage = () => {
   return (
-    <section className='rounded-md dark:bg-black dark:text-gray-100'>
+    <section className='rounded-md dark:bg-black dark:text-gray-100 md:py-[4rem]'>
       <div className='container  max-w-5xl justify-items-center px-4 py-12'>
         <div className='mx-4 grid gap-4 sm:grid-cols-12'>
           <div className='relative col-span-12 space-y-6 px-4 sm:col-span-9'>

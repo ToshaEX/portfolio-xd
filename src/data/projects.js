@@ -1,6 +1,7 @@
 import Blogger from '../assets/projects/blogger-app';
 import SalonLK from '../assets/projects/salonlk';
 import ResumeTracker from '../assets/projects/resume-tracker';
+import SecureFrontend from '../assets/projects/secure-frontend';
 import { project, techStack } from '../constants';
 
 export const projects = [
@@ -130,7 +131,7 @@ export const projects = [
     name: 'Secure Frontend',
     overview: 'Applicant Tracking System',
     isLive: false,
-    images: [...SalonLK],
+    images: [...SecureFrontend],
     date: '2023 MAY',
     techStack: [
       techStack.TYPESCRIPT,

@@ -52,7 +52,7 @@ const Social = () => (
 
 const Footer = () => {
   return (
-    <div className='h-auto bg-black text-center'>
+    <div className=' w-full bg-black text-center'>
       <div className='flex w-full flex-col justify-center p-10 pb-2 text-white'>
         <ContactMe />
         <Social />
