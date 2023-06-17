@@ -21,7 +21,7 @@ const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <>
-      <div className='fixed  z-50 flex h-16 w-full flex-auto items-center justify-center bg-black pe-16 ps-16 font-sans font-medium text-slate-50'>
+      <div className='fixed  z-50 flex h-16 w-full flex-auto items-center justify-center bg-black pe-6 ps-6 font-sans font-medium text-slate-50 md:pe-16 md:ps-16'>
         <div className='flex-auto font-sans text-3xl'>ToshaEX.Dev</div>
 
         {/* Desktop Device*/}
@@ -50,7 +50,7 @@ const NavBar = () => {
       {menuOpen && (
         <AnimatePresence>
           <motion.div
-            className='fixed  top-16 z-20 flex w-full flex-col bg-black bg-opacity-90 text-white md:hidden'
+            className='fixed top-16  z-20 flex w-full flex-col items-center justify-center bg-black bg-opacity-90 text-white md:hidden'
             initial={{ opacity: 0 }}
             exit={{ opacity: 0 }}
             animate={{ opacity: 1, transform: 1 }}
