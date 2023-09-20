@@ -16,28 +16,37 @@ const LiveIcon = ({ deploy_link }) => {
   );
 };
 
-const ProjectCardView = ({ id, name, overview, isLive, images, deploy_link, project }) => {
+const CardBody = ({ id, name, overview, project }) => {
   const { label, tagColor, textColor } = project;
   return (
-    <div className='relative max-h-[400px] w-[300px] overflow-hidden rounded-[1rem] shadow-md'>
+    <div className='absolute bottom-0 left-0 right-0 h-[130px]  overflow-visible pl-2 transition-all duration-500 group-hover:h-[200px] group-hover:bg-gray-300'>
+      <h4 className='p-1 pt-2 text-lg font-bold text-gray-500 '>
+        {name} &bull; <Tag label={label} tagColor={tagColor} textColor={textColor} />
+      </h4>
+      <p className='m-1  mb-3 line-clamp-1 text-sm font-bold text-gray-500 group-hover:line-clamp-none'>
+        {overview}
+      </p>
+
+      <div className=' absolute bottom-1 right-1 mb-2 hidden group-hover:flex '>
+        <Link
+          className='mr-2 rounded-lg bg-gray-300 p-2 font-bold text-gray-800 transition-all duration-500 hover:bg-gray-400  hover:text-white'
+          to={`/projects/${id}`}
+        >
+          Read more
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+const ProjectCardView = ({ id, name, overview, isLive, images, deploy_link, project }) => {
+  return (
+    <div className='group relative h-[380px] w-[280px] overflow-hidden rounded-[1rem]  shadow-md'>
       {isLive && <LiveIcon deploy_link={deploy_link} />}
-      <div className='relative z-0 min-h-[250px] min-w-[300px]'>
-        <img src={images[0]} className='z-1 absolute h-full w-full object-cover' />
+      <div className='relative z-0 min-h-[250px] min-w-[300px] scale-[1.05] transition duration-500 group-hover:scale-[1]'>
+        <img src={images[0]} className='z-1  absolute h-full w-full object-cover' />
       </div>
-      <div className='ml-2'>
-        <h4 className='truncate p-1 text-lg font-bold text-gray-500'>
-          {name} &bull; <Tag label={label} tagColor={tagColor} textColor={textColor} />
-        </h4>
-        <h5 className='truncate p-1 pb-3 text-sm font-bold text-gray-500'>{overview}</h5>
-        <div className='mb-2 flex justify-end'>
-          <Link
-            className='mr-2 rounded-lg bg-gray-300 p-2 font-bold text-gray-800 transition-all duration-500 hover:bg-gray-400 '
-            to={`/projects/${id}`}
-          >
-            Read more
-          </Link>
-        </div>
-      </div>
+      <CardBody id={id} name={name} overview={overview} project={project} />
     </div>
   );
 };
