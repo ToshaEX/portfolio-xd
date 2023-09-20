@@ -50,7 +50,7 @@ const NavBar = () => {
       {menuOpen && (
         <AnimatePresence>
           <motion.div
-            className='fixed top-16  z-20 flex w-full flex-col items-center justify-center bg-black bg-opacity-90 text-white md:hidden'
+            className='fixed top-16  z-20 flex w-full flex-col items-center justify-center bg-black bg-opacity-90 pb-5 text-white md:hidden'
             initial={{ opacity: 0 }}
             exit={{ opacity: 0 }}
             animate={{ opacity: 1, transform: 1 }}
@@ -58,7 +58,7 @@ const NavBar = () => {
           >
             {navItems.map((item, i) => (
               <Link
-                className='ml-2 mt-2 text-lg transition duration-300 ease-in-out hover:text-gray-300 '
+                className='my-4 ml-2 text-xl font-semibold transition duration-300 ease-in-out hover:text-gray-300 '
                 to={item.path}
                 key={`nav-item-${i}`}
               >
