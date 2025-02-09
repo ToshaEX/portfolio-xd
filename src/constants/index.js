@@ -42,13 +42,18 @@ const ProjectStatus = {
   SELF: { label: 'Self', textColor: textColor.YELLOW, tagColor: backgroundColor.YELLOW },
   INTERNAL: { label: 'Internal', textColor: textColor.GREEN, tagColor: backgroundColor.GREEN },
   CLIENT: { label: 'Client', textColor: textColor.PURPLE, tagColor: backgroundColor.PURPLE },
+  PRODUCT: { label: 'Product', textColor: textColor.CYAN, tagColor: backgroundColor.CYAN },
 };
 const technologies = {
   NODEJS: { label: 'Node js', textColor: textColor.TEAL, tagColor: backgroundColor.TEAL },
   REDUX: { label: 'redux', textColor: textColor.TEAL, tagColor: backgroundColor.TEAL },
   NESTJS: { label: 'Nest Js', textColor: textColor.RED, tagColor: backgroundColor.RED },
+  LAMINAS: { label: 'Laminas/Zend', textColor: textColor.RED, tagColor: backgroundColor.RED },
   NEXTJS: { label: 'Next Js', textColor: textColor.GREEN, tagColor: backgroundColor.GREEN },
   REACT: { label: 'React', textColor: textColor.GRAY, tagColor: backgroundColor.GRAY },
+  MONGODB: { label: 'MongoDB', textColor: textColor.YELLOW, tagColor: backgroundColor.YELLOW },
+  POSTGRESSQL: { label: 'PostgresSQL', textColor: textColor.YELLOW, tagColor: backgroundColor.YELLOW },
+  ORACLEDB: { label: 'OracleDb', textColor: textColor.YELLOW, tagColor: backgroundColor.YELLOW },
   MONGODB: { label: 'MongoDB', textColor: textColor.YELLOW, tagColor: backgroundColor.YELLOW },
   TYPESCRIPT: {
     label: 'Typescript',
@@ -56,6 +61,7 @@ const technologies = {
     tagColor: backgroundColor.PURPLE,
   },
   JAVASCRIPT: { label: 'Javascript', textColor: textColor.BLUE, tagColor: backgroundColor.BLUE },
+  PHP: { label: 'PHP', textColor: textColor.BLUE, tagColor: backgroundColor.BLUE },
   CHAKRAUI: { label: 'Chakra UI', textColor: textColor.ORANGE, tagColor: backgroundColor.ORANGE },
   MUI: { label: 'MUI', textColor: textColor.ORANGE, tagColor: backgroundColor.ORANGE },
   BOOtSTRAP: { label: 'Bootstrap', textColor: textColor.ORANGE, tagColor: backgroundColor.ORANGE },

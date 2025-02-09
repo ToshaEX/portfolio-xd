@@ -7,8 +7,8 @@ const ExperiencePage = () => {
   return (
     <section className='rounded-md bg-black text-gray-100 md:py-[4rem]'>
       <div className='container  max-w-5xl justify-items-center px-4 py-12'>
-        <div className='mx-4 grid gap-4 sm:grid-cols-12'>
-          <div className='relative col-span-12 space-y-6 px-4 sm:col-span-9'>
+        <div className='mx-4 grid gap-4 '>
+          <div className='relative col-span-12 space-y-6 px-4 sm:col-span-9 lg:ml-[10rem]'>
             {experienceData.map((data, i) => (
               <div key={data.company + i}>
                 <div className='-ml-4 mb-3 text-left text-xl font-semibold tracking-wide'>

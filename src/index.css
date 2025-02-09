@@ -13,3 +13,6 @@ body {
 *::-moz-selection {
   background-color: blueviolet;
 }
+::selection {
+  background-color:  blueviolet;
+}

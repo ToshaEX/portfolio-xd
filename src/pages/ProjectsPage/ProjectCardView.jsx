@@ -19,7 +19,7 @@ const LiveIcon = ({ deploy_link }) => {
 const CardBody = ({ id, name, overview, project }) => {
   const { label, tagColor, textColor } = project;
   return (
-    <div className='absolute bottom-0 left-0 right-0 h-[130px]  overflow-visible pl-2 transition-all duration-500 group-hover:h-[200px] group-hover:bg-gray-300'>
+    <div className='absolute bottom-0 left-0 right-0 h-[130px]  overflow-visible pl-2 transition-all duration-500 group-hover:h-[150px] group-hover:bg-gray-300'>
       <h4 className='p-1 pt-2 text-lg font-bold text-gray-500 '>
         {name} &bull; <Tag label={label} tagColor={tagColor} textColor={textColor} />
       </h4>
@@ -29,7 +29,7 @@ const CardBody = ({ id, name, overview, project }) => {
 
       <div className=' absolute bottom-1 right-1 mb-2 hidden group-hover:flex '>
         <Link
-          className='mr-2 rounded-lg bg-gray-300 p-2 font-bold text-gray-800 transition-all duration-500 hover:bg-gray-400  hover:text-white'
+          className='mr-2 rounded-lg bg-gray-300 p-2 font-bold text-gray-800 hover:bg-gray-400  hover:text-white'
           to={`/projects/${id}`}
         >
           Read more
@@ -44,7 +44,7 @@ const ProjectCardView = ({ id, name, overview, isLive, images, deploy_link, proj
     <div className='group relative h-[380px] w-[280px] overflow-hidden rounded-[1rem]  shadow-md'>
       {isLive && <LiveIcon deploy_link={deploy_link} />}
       <div className='relative z-0 min-h-[250px] min-w-[300px] scale-[1.05] transition duration-500 group-hover:scale-[1]'>
-        <img src={images[0]} className='z-1  absolute h-full w-full object-cover' />
+        <img src={images[0]} className='z-1  absolute h-full w-full object-contain' />
       </div>
       <CardBody id={id} name={name} overview={overview} project={project} />
     </div>

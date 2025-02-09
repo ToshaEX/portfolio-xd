@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { pageWrapper, titleWrapper } from '../../wrapper';
 import { useParams } from 'react-router-dom';
-import { projects } from '../../data/projects';
+import { projects } from '../../data/projects/index';
 import { Carousel, Tag, Banner } from '../../components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
