@@ -19,7 +19,7 @@ const LiveIcon = ({ deploy_link }) => {
 const CardBody = ({ id, name, overview, project }) => {
   const { label, tagColor, textColor } = project;
   return (
-    <div className='absolute bottom-0 left-0 right-0 h-[130px]  overflow-visible pl-2 transition-all duration-500 group-hover:h-[150px] group-hover:bg-gray-300'>
+    <div className='absolute border-t-2 border-t-black/5 bottom-0 left-0 right-0 h-[130px]  overflow-visible px-2 transition-all duration-500 group-hover:h-[150px]'>
       <h4 className='p-1 pt-2 text-lg font-bold text-gray-500 '>
         {name} &bull; <Tag label={label} tagColor={tagColor} textColor={textColor} />
       </h4>
@@ -27,9 +27,9 @@ const CardBody = ({ id, name, overview, project }) => {
         {overview}
       </p>
 
-      <div className=' absolute bottom-1 right-1 mb-2 hidden group-hover:flex '>
+      <div className='absolute bottom-1 right-1 mb-2 hidden opacity-0 group-hover:flex group-hover:opacity-100'>
         <Link
-          className='mr-2 rounded-lg bg-gray-300 p-2 font-bold text-gray-800 hover:bg-gray-400  hover:text-white'
+          className='mr-2 rounded-lg bg-gray-300/30 backdrop-filter p-2 font-bold text-gray-800 hover:text-black '
           to={`/projects/${id}`}
         >
           Read more
@@ -41,7 +41,7 @@ const CardBody = ({ id, name, overview, project }) => {
 
 const ProjectCardView = ({ id, name, overview, isLive, images, deploy_link, project }) => {
   return (
-    <div className='group relative h-[380px] w-[280px] overflow-hidden rounded-[1rem]  shadow-md'>
+    <div className='group border-2 border-black/5 relative h-[380px] w-[280px] overflow-hidden rounded-[1rem]  shadow-md hover:shadow-lg transition-shadow duration:500'>
       {isLive && <LiveIcon deploy_link={deploy_link} />}
       <div className='relative z-0 min-h-[250px] min-w-[300px] scale-[1.05] transition duration-500 group-hover:scale-[1]'>
         <img src={images[0]} className='z-1  absolute h-full w-full object-contain' />
