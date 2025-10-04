@@ -2,15 +2,13 @@ import React from 'react';
 import { pageWrapper, titleWrapper } from '../../wrapper';
 
 const about = [
-  'Welcome to my portfolio site! I am currently pursuing a BSc (hons) in Software Engineering, and I am passionate about creating innovative software solutions. I recently completed my internship at Redblocks Technologies, where I gained valuable experience in software development and honed my skills in various technologies.',
+  'Hello there! 👋',
 
-  'As an Associate Software Engineer at Redblocks, I am actively involved in the development of cutting-edge applications. My key competencies lie in front-end and back-end development using technologies such as React, Nest Js, Next js, MongoDB, JavaScript, TypeScript, and MySql. I am well-versed in building responsive and user-friendly web applications that deliver seamless user experiences.',
+  'I’m Oshan Tharindu, a passionate Fullstack Developer from Sri Lanka. As a software engineer, I value critical thinking, problem-solving, and a strong attention to detail — qualities that help me design reliable, efficient, and user-centered solutions. I hold a BSc (Hons) in Software Engineering from the Sri Lanka Technological Campus, where I graduated with a Second Class (Lower Division).',
 
-  'Throughout my academic and professional journey, I have gained a solid foundation in software engineering principles and best practices. I am skilled in designing and implementing scalable and maintainable code, and I am always eager to learn and adopt new technologies to stay ahead in the ever-evolving field of software development.',
+  'I’m deeply interested in Fullstack Development and love bringing ideas to life through clean, scalable, and well-structured applications. Beyond just coding, I enjoy exploring software architecture and system design, ensuring that every solution I build is both functional and maintainable.',
 
-  "My portfolio showcases my work as a full-stack developer, highlighting my expertise in building modern web applications. I have a strong eye for detail and take pride in delivering high-quality code that meets the needs of clients and end-users alike. Whether it's creating interactive user interfaces, developing RESTful APIs, or designing robust databases, I strive for excellence in every aspect of software development.",
-
-  'With a keen focus on solving complex problems and a passion for creating innovative solutions, I am dedicated to contributing to the world of software engineering. I invite you to explore my portfolio and learn more about my projects, skills, and achievements. Thank you for visiting my site, and I look forward to connecting with you!',
+  'Over the years, I’ve gained hands-on experience with a wide range of technologies, including NestJS, React, Next.js, Node.js, TypeScript, PostgreSQL, and MongoDB. My goal is to continue growing as a developer while building impactful digital products that make a difference.'
 ];
 
 const AboutPage = () => {

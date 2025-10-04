@@ -26,8 +26,8 @@ const ContactMe = () => (
     </span>
     <span className=' text-zinc-400'>
       Mobile:{' '}
-      <a href='tel:+94 71 320 66 93' className='transition-all duration-500 hover:text-zinc-500'>
-        +94 71 320 66 93
+      <a href='tel:+46 76 74 834 57' className='transition-all duration-500 hover:text-zinc-500'>
+        +46 76 74 834 57
       </a>{' '}
     </span>
   </div>
@@ -51,6 +51,7 @@ const Social = () => (
 );
 
 const Footer = () => {
+  const footerText = `© ${new Date().getFullYear()} Oshan Tharindu`;
   return (
     <div className=' w-full bg-black text-center'>
       <div className='flex w-full flex-col justify-center p-10 pb-2 text-white'>
@@ -59,8 +60,8 @@ const Footer = () => {
       </div>
       <div className='pb-10 text-white'>
         <span className=' text-zinc-50'>
-          @2023 OSHAN THARINDU <br />
-          ALL RIGHTS RESERVED
+         {footerText}<br/>
+          {'ALL RIGHTS RESERVED'}
         </span>
       </div>
     </div>
