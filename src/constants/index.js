@@ -3,6 +3,7 @@ const root = {
   ABOUT_PAGE: '/about',
   EXPERIENCE_PAGE: '/experience',
   PROJECTS_PAGE: '/projects',
+  LEARNING_PAGE: '/learning',
 };
 
 const textColor = {
