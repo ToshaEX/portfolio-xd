@@ -54,7 +54,6 @@ const technologies = {
   MONGODB: { label: 'MongoDB', textColor: textColor.YELLOW, tagColor: backgroundColor.YELLOW },
   POSTGRESSQL: { label: 'PostgresSQL', textColor: textColor.YELLOW, tagColor: backgroundColor.YELLOW },
   ORACLEDB: { label: 'OracleDb', textColor: textColor.YELLOW, tagColor: backgroundColor.YELLOW },
-  MONGODB: { label: 'MongoDB', textColor: textColor.YELLOW, tagColor: backgroundColor.YELLOW },
   TYPESCRIPT: {
     label: 'Typescript',
     textColor: textColor.PURPLE,

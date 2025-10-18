@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom';
 
 const navItems = [
   { title: 'Home', path: routes.LANDING_PAGE },
-  { title: 'About Me', path: routes.ABOUT_PAGE },
   { title: 'Project', path: routes.PROJECTS_PAGE },
   { title: 'Experience', path: routes.EXPERIENCE_PAGE },
+  { title: 'About Me', path: routes.ABOUT_PAGE },
 ];
 
 const variants = {
