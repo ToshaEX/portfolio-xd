@@ -53,7 +53,11 @@ const technologies = {
   NEXTJS: { label: 'Next Js', textColor: textColor.GREEN, tagColor: backgroundColor.GREEN },
   REACT: { label: 'React', textColor: textColor.GRAY, tagColor: backgroundColor.GRAY },
   MONGODB: { label: 'MongoDB', textColor: textColor.YELLOW, tagColor: backgroundColor.YELLOW },
-  POSTGRESSQL: { label: 'PostgresSQL', textColor: textColor.YELLOW, tagColor: backgroundColor.YELLOW },
+  POSTGRESSQL: {
+    label: 'PostgresSQL',
+    textColor: textColor.YELLOW,
+    tagColor: backgroundColor.YELLOW,
+  },
   ORACLEDB: { label: 'OracleDb', textColor: textColor.YELLOW, tagColor: backgroundColor.YELLOW },
   TYPESCRIPT: {
     label: 'Typescript',

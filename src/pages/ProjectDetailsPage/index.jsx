@@ -110,4 +110,4 @@ const ProjectDetailsPage = () => {
   );
 };
 
-export default pageWrapper(titleWrapper(ProjectDetailsPage));
+export default pageWrapper(titleWrapper(ProjectDetailsPage),'project_details');

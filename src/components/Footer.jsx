@@ -16,7 +16,7 @@ const ContactMe = () => (
   <div className='flex flex-col justify-center pb-2'>
     <span className='text-gap mb-2  text-xl font-bold'>Contact Me</span>
     <span className=' text-zinc-400'>
-      email:{' '}
+      Email:{' '}
       <a
         href='mailto:tharinduoshan@gmail.com'
         className='transition-all duration-500 hover:text-zinc-500'
@@ -60,7 +60,8 @@ const Footer = () => {
       </div>
       <div className='pb-10 text-white'>
         <span className=' text-zinc-50'>
-         {footerText}<br/>
+          {footerText}
+          <br />
           {'ALL RIGHTS RESERVED'}
         </span>
       </div>

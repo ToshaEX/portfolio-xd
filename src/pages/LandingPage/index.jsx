@@ -12,4 +12,4 @@ const LandingPage = () => {
   );
 };
 
-export default pageWrapper(LandingPage);
+export default pageWrapper(LandingPage,'landing');

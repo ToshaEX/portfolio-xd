@@ -22,4 +22,4 @@ const ProjectsPage = () => {
   );
 };
 
-export default pageWrapper(titleWrapper(ProjectsPage, 'Projects'));
+export default pageWrapper(titleWrapper(ProjectsPage,'Projects'), 'projects');

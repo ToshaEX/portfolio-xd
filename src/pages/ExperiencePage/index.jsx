@@ -33,4 +33,4 @@ const ExperiencePage = () => {
   );
 };
 
-export default pageWrapper(titleWrapper(ExperiencePage, 'Experience'), false);
+export default pageWrapper(titleWrapper(ExperiencePage,'Experience'),'experience', false);

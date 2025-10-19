@@ -38,4 +38,4 @@ const AboutPage = () => {
   );
 };
 
-export default pageWrapper(titleWrapper(AboutPage, 'About Me'), false);
+export default pageWrapper(titleWrapper(AboutPage ,'About Me'),'about_me', false);
