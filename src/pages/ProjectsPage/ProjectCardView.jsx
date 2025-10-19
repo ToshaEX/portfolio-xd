@@ -1,6 +1,7 @@
 import React from 'react';
-import { Tag } from '../../components';
 import { Link } from 'react-router-dom';
+
+import { Tag } from '../../components';
 
 const LiveIcon = ({ deploy_link }) => {
   return (

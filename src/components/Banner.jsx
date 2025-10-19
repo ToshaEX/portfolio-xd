@@ -1,7 +1,7 @@
+import React from 'react';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { easeInOut, motion } from 'framer-motion';
-import React from 'react';
 
 const Banner = ({ label, message, onClose }) => {
   return (

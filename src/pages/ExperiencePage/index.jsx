@@ -1,7 +1,8 @@
 import React from 'react';
+
 import { pageWrapper, titleWrapper } from '../../wrapper';
-import ExperienceSection from './ExperienceSection';
 import { experienceData } from './data.js';
+import ExperienceSection from './ExperienceSection';
 
 const ExperiencePage = () => {
   return (
@@ -33,4 +34,4 @@ const ExperiencePage = () => {
   );
 };
 
-export default pageWrapper(titleWrapper(ExperiencePage,'Experience'),'experience', false);
+export default pageWrapper(titleWrapper(ExperiencePage, 'Experience'), 'experience', false);

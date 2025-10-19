@@ -1,5 +1,7 @@
 import React from 'react';
+
 import Oshan from '../../assets/OSHAN1.jpg';
+
 import './styles.css';
 
 const OshanImage = () => {

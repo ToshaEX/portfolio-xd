@@ -11,7 +11,7 @@ const titleWrapper = (Components, title) =>
         <motion.div
           initial={{ y: '20px', opacity: '0' }}
           animate={{ y: '0', opacity: '5' }}
-          whileInView={{y:'0',opacity:'1'}}
+          whileInView={{ y: '0', opacity: '1' }}
           transition={{ duration: 0.3 }}
           className='mb-8 text-center text-5xl font-bold md:mb-10'
         >

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { pageWrapper, titleWrapper } from '../../wrapper';
 
 const about = [
@@ -8,7 +9,7 @@ const about = [
 
   'I’m deeply interested in Fullstack Development and love bringing ideas to life through clean, scalable, and well-structured applications. Beyond just coding, I enjoy exploring software architecture and system design, ensuring that every solution I build is both functional and maintainable.',
 
-  'Over the years, I’ve gained hands-on experience with a wide range of technologies, including NestJS, React, Next.js, Node.js, TypeScript, PostgreSQL, and MongoDB. My goal is to continue growing as a developer while building impactful digital products that make a difference.'
+  'Over the years, I’ve gained hands-on experience with a wide range of technologies, including NestJS, React, Next.js, Node.js, TypeScript, PostgreSQL, and MongoDB. My goal is to continue growing as a developer while building impactful digital products that make a difference.',
 ];
 
 const AboutPage = () => {
@@ -38,4 +39,4 @@ const AboutPage = () => {
   );
 };
 
-export default pageWrapper(titleWrapper(AboutPage ,'About Me'),'about_me', false);
+export default pageWrapper(titleWrapper(AboutPage, 'About Me'), 'about_me', false);

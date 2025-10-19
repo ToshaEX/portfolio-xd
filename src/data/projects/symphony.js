@@ -1,5 +1,5 @@
-import { project, techStack } from '../../constants';
 import Symphony from '../../assets/projects/symphony';
+import { project, techStack } from '../../constants';
 
 export const symphony = {
   name: 'Symphony',
@@ -22,8 +22,5 @@ export const symphony = {
     `Symphony is built from the ground up for Financial Services Organisations and Telco’s who are looking for their own, branded digital payment platform and fully immersive ‘Life’Tech. The combination of FinTech, Digital Banking and Customer Loyalty capabilities in one platform is unique to Symphony. Symphony helps users to maintain their virtual wallets, pay to merchants/payees conveniently, connect with existing banking functions, discover new shopping experiences (deals, coupons and vouchers), take part in special promotions and loyalty programs, and stay in touch with family and friends (chat, share credit, split pay and gift). With a few taps on a smartphone, users can access a range of financial, social and lifestyle features and securely make purchases.`,
     `Managed product maintenance and customer requests for the Symphony product, working for reputed clients including Dialog and DFCC Bank`,
   ],
-  functions: [
-    'Create CRUD operations',
-    'Implement approval modules',
-  ],
+  functions: ['Create CRUD operations', 'Implement approval modules'],
 };

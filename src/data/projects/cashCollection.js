@@ -1,5 +1,5 @@
-import { project, techStack } from '../../constants';
 import CashCollection from '../../assets/projects/cash-collection';
+import { project, techStack } from '../../constants';
 
 export const cashCollection = {
   name: 'Cash collection (Dialog)',
@@ -28,5 +28,5 @@ export const cashCollection = {
     'Persist state using redux-persist',
     'Image upload with multer',
     'Search and filter options',
-  ]
+  ],
 };

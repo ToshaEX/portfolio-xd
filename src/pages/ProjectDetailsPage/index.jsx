@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { pageWrapper, titleWrapper } from '../../wrapper';
 import { useParams } from 'react-router-dom';
-import { projects } from '../../data/projects/index';
-import { Carousel, Tag, Banner } from '../../components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { Banner, Carousel, Tag } from '../../components';
+import { projects } from '../../data/projects/index';
+import { pageWrapper, titleWrapper } from '../../wrapper';
 
 const TechStack = ({ project }) => {
   return (
@@ -110,4 +111,4 @@ const ProjectDetailsPage = () => {
   );
 };
 
-export default pageWrapper(titleWrapper(ProjectDetailsPage),'project_details');
+export default pageWrapper(titleWrapper(ProjectDetailsPage), 'project_details');

@@ -9,7 +9,7 @@
     "preview": "vite preview --port 8080",
     "lint": "eslint src/**/*.{jsx,js,json}",
     "lint:fix": "eslint --fix src/**/*.{js,jsx,json}",
-    "format": "prettier --write src/**/*.{js,jsx,css,md,json} --config ./.prettierrc"
+    "format": "npx prettier --write 'src/**/*.{js,jsx,ts,tsx}'"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
@@ -26,6 +26,7 @@
     "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.7.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
@@ -35,7 +36,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-tailwindcss": "^3.11.0",
     "postcss": "^8.4.21",
-    "prettier": "^2.8.7",
+    "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.2.7",
     "tailwindcss": "^3.3.1",
     "vite": "^4.2.0"

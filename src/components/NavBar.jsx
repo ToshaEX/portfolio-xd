@@ -1,9 +1,10 @@
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { AnimatePresence, motion } from 'framer-motion';
+
 import { routes } from '../constants';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 const navItems = [
   { title: 'Home', path: routes.LANDING_PAGE },

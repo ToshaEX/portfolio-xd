@@ -1,5 +1,3 @@
-import SymphonyPhoto0 from "./symphony-00.png";
+import SymphonyPhoto0 from './symphony-00.png';
 
-export default [
-    SymphonyPhoto0,
-  ];
+export default [SymphonyPhoto0];

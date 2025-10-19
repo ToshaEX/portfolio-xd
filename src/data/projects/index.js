@@ -1,13 +1,13 @@
+import { amazonClone } from './amazonClone';
 import { bloggerApp } from './bloggerApp';
-import { salonLk } from './salonLk';
-import { resumeTracker } from './resumeTracker';
-import { secureFrontend } from './secureFrontend';
+import { cashCollection } from './cashCollection';
 import { filmpire } from './filmpire';
 import { portfolio } from './portfolio';
-import { amazonClone } from './amazonClone';
-import { symphony } from './symphony';
+import { resumeTracker } from './resumeTracker';
+import { salonLk } from './salonLk';
+import { secureFrontend } from './secureFrontend';
 import { ssmAdmin } from './ssmAdmin';
-import {cashCollection} from './cashCollection'
+import { symphony } from './symphony';
 
 export const projects = [
   {

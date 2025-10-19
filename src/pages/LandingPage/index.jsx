@@ -1,7 +1,8 @@
 import React from 'react';
+
+import { pageWrapper } from '../../wrapper';
 import Content from './Content';
 import OshanImage from './OshanImage';
-import { pageWrapper } from '../../wrapper';
 
 const LandingPage = () => {
   return (
@@ -12,4 +13,4 @@ const LandingPage = () => {
   );
 };
 
-export default pageWrapper(LandingPage,'landing');
+export default pageWrapper(LandingPage, 'landing');

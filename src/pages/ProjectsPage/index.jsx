@@ -1,7 +1,8 @@
 import React from 'react';
+
+import { projects } from '../../data/projects/index';
 import { pageWrapper, titleWrapper } from '../../wrapper';
 import ProjectCardView from './ProjectCardView';
-import { projects } from '../../data/projects/index';
 
 const ProjectsPage = () => {
   return (
@@ -22,4 +23,4 @@ const ProjectsPage = () => {
   );
 };
 
-export default pageWrapper(titleWrapper(ProjectsPage,'Projects'), 'projects');
+export default pageWrapper(titleWrapper(ProjectsPage, 'Projects'), 'projects');
