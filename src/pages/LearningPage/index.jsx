@@ -1,68 +1,45 @@
 import React, { useEffect, useRef } from 'react'
-import { pageWrapper, titleWrapper } from '../../wrapper';
-import {motion, useInView, useScroll, useTransform} from 'framer-motion'
-import { height } from '@fortawesome/free-brands-svg-icons/fa42Group';
-import { useParallax } from '../../hooks/useParralax';
+import { pageWrapper } from '../../wrapper';
+import {motion,  useMotionTemplate, useScroll, useTransform} from 'framer-motion'
+import IntroVideo from "../../assets/noticeble.mp4"
 
 const LearningPage = () => {
     const ref = useRef(null);
-    const { scrollYProgress } = useScroll({ target: ref });
-    const y = useTransform(scrollYProgress, [0, 1], [300, -300]);
 
-     const x1 = useTransform(scrollYProgress, [0, 1], [-150, 150]);
-  const x2 = useTransform(scrollYProgress, [0, 1], [150, -150]);
-     const scalex1 = useTransform(scrollYProgress, [0, 3], [0, 3]);
-//   const scalex2 = useTransform(scrollYProgress, [0, 1], [150, -150]);
+
+
+
+    const { scrollYProgress } = useScroll({ 
+      target: ref,
+      offset:["0%","66%"],
+      // layoutEffect:false
+    });
+    const y = useTransform(scrollYProgress, [0,1], [0, 200]);
+    const css =  useMotionTemplate`calc(${y}vh)`
+
 
 useEffect(()=>{
-    const unsubscribe = scalex1.on("change", (latest) => {
+    const unsubscribe = y.on("change", (latest) => {
     console.log("Parallax Y:", latest);
+    console.log("offset Y:", y.get());
   });
   return () => unsubscribe();
 },[y])
 
-const cardContainer={
-    offscreen:{
-        height:"500px",
-        background:"#415395",
-    },
-    onscreen:{
-        height:"500px",
-        background:"#000",
-        // translateY:'500px'
-    }
-}
+
 
   return (
     
-    <motion.div style={{height:'1000vh',display:'flex',flexDirection:'column',gap:'20rem'}}>
-        <motion.div
-        style={{background:"#000"}}
-        ref={ref}
-        >
-        <div style={{ display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'center',gap:'2rem'}}>
-           <motion.div key={'1'}
-            style={{width:'250px',height:'250px',background:'#fd45',display:'flex',justifyContent:'center',alignItems:'center',
-            // x:x1,
-            y:y,
-            scale:scalex1
-            }} 
-            >
-        
-           Left
-           </motion.div> 
-           <motion.div key={"2"} style={{width:'250px',height:'250px',background:'#fd45',display:'flex',justifyContent:'center',alignItems:'center',
-        //    x:x2,
-           y:y,
-           scale:scalex1
-           }} >
-           Right
-           </motion.div> 
-        </div>
-        </motion.div>
-        
+    <motion.div ref={ref} style={{height:'300vh'}}>
+        {/* <div style={{height:"4rem"}} /> */}
+        <motion.video
+         src={IntroVideo} autoPlay loop muted style={{height:'calc(100vh + 64px)',width:'100vw',objectFit:'cover',position:'relative',marginTop:'-64px',
+        y:css,
+        }}></motion.video>
     </motion.div>
   )
 }
 
-export default pageWrapper(titleWrapper(LearningPage),'learnings');
+export default pageWrapper(LearningPage,'learnings',true);
+
+

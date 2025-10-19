@@ -3,6 +3,7 @@ import React, {
 } from 'react';
 import { NavBar, Footer } from '../components';
 import { AnimatePresence, motion, useScroll } from 'framer-motion';
+import ReactLenis from 'lenis/react';
 
 const pageWrapper = (Components,key, isFullHeight = true) =>
   function HOC() {
@@ -17,6 +18,8 @@ const pageWrapper = (Components,key, isFullHeight = true) =>
             className='progress-bar fixed left-0 right-0 top-[4rem] z-50 h-1 origin-[0] bg-red-500'
             style={{ scaleX: scrollYProgress }}
           />
+          <ReactLenis root >
+
         <AnimatePresence key={key} mode='wait' >
           <motion.div
           ref={ref}
@@ -31,6 +34,7 @@ const pageWrapper = (Components,key, isFullHeight = true) =>
             <Components />
           </motion.div>
         </AnimatePresence>
+          </ReactLenis>
           <Footer />
       </>
     );

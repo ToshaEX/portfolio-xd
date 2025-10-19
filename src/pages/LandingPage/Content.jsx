@@ -13,8 +13,8 @@ const Content = () => {
       >
         <div className='m-5 text-center md:text-left'>
           <div className='text-5xl text-black md:text-6xl'>
-            Hi, there
-            <br /> I&apos;m <span className='text-zinc-500'>Oshan Tharindu</span>.
+            Hi there,
+            <br /> I&apos;m <span className='text-zinc-500'>Oshan</span>.
             <br />
             Here is my key competencies{' '}
             <div className='text-zinc-500'>
