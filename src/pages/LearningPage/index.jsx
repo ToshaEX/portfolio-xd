@@ -9,10 +9,12 @@ const LearningPage = () => {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['0%', '66%'],
+    offset: ['0%', '80%'],
     // layoutEffect:false
   });
-  const y = useTransform(scrollYProgress, [0, 1], [0, 200]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, 400]);
+  const scaleX = useTransform(scrollYProgress, [0.15, 1], [1, 600]);
+  const opacity = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
   const css = useMotionTemplate`calc(${y}vh)`;
 
   useEffect(() => {
@@ -24,22 +26,30 @@ const LearningPage = () => {
   }, [y]);
 
   return (
-    <motion.div ref={ref} style={{ height: '300vh' }}>
+    <motion.div ref={ref} className='h-[500vh] overflow-hidden'>
       {/* <div style={{height:"4rem"}} /> */}
-      <motion.video
-        src={IntroVideo}
-        autoPlay
-        loop
-        muted
-        style={{
-          height: 'calc(100vh + 64px)',
-          width: '100vw',
-          objectFit: 'cover',
-          position: 'relative',
-          marginTop: '-64px',
-          y: css,
-        }}
-      ></motion.video>
+      <motion.div className='relative h-[calc(100vh+4rem)] w-[100vw]'>
+        <motion.video
+          src={IntroVideo}
+          autoPlay
+          loop
+          muted
+          className='h-full w-full object-cover mt-[-4rem]'
+          style={{
+            opacity,
+            y: css,
+          }}
+        ></motion.video>
+        <motion.h1
+          className='absolute text-center  inset-0 grid place-items-center bg-black text-white font-[900] text-[80px] mix-blend-multiply select-none w-[100vw] h-full md:text-[120px] lg:text-[200px]'
+          style={{
+            y: css,
+            scale: scaleX,
+          }}
+        >
+          ToshaEX
+        </motion.h1>
+      </motion.div>
     </motion.div>
   );
 };

@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { AnimatePresence, motion } from 'framer-motion';
 
+import Logo from '../assets/logo.svg';
 import { routes } from '../constants';
+import Intro from '../assets/noticeble.mp4'
 
 const navItems = [
   { title: 'Home', path: routes.LANDING_PAGE },
@@ -21,10 +23,75 @@ const variants = {
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  // const [show, setShow] = useState(sessionStorage.getItem("overlayPlayed"));
+  const hasAnimated = useMemo(() => false, []); // starts as false
+
+  const [show, setShow] = useState(!hasAnimated);
+
+  // Once animation completes, hide the component
+  const handleComplete = () => {
+    setShow(false);
+  };
+
   return (
     <>
-      <div className='fixed  z-50 flex h-16 w-full flex-auto items-center justify-center bg-black pe-6 ps-6 font-sans font-medium text-slate-50 md:pe-16 md:ps-16'>
-        <div className='flex-auto font-sans text-3xl'>ToshaEX.Dev</div>
+        <AnimatePresence >
+        {/* {show && <motion.div
+        initial={{opacity:1,display:'absolute'}}
+        animate={{opacity:0}}
+        transition={{duration:1,delay:'1'}}
+        // exit={{opacity:0}}
+        onAnimationComplete={() => setShow(false)}
+        className='fixed overflow-hidden z-[60]  w-[100%] h-[100%]  bg-black overscroll-none'>
+        </motion.div>} */}
+        {show && <motion.video
+        src={Intro}
+        initial={{opacity:1,display:'absolute'}}
+        animate={{opacity:0}}
+        transition={{duration:.5,delay:'.2'}}
+        // exit={{opacity:0}}
+        onAnimationComplete={() => handleComplete()}
+        className='fixed overflow-hidden z-[60]  w-[100%] h-[100%]  bg-black overscroll-none object-cover'>
+        </motion.video>}
+        </AnimatePresence>
+      
+      <motion.img src={Logo} alt='logo'  className='fixed opacity-0 origin-center z-[70]'
+       initial={{
+        display:'absolute',
+        x:"50%",
+        y:'50%',
+        opacity:'0',
+          translateX:'-50%',
+          translateY:'-50%',
+          // background:'red',
+          scale:'200%',
+          // transformOrigin:'center'
+        // y: "50vh" 
+        }}
+        animate={{scale:1, top:'16px',left:'64px',display:'fixed',opacity:1}}
+        transition={{duration:.5,delay:''}}
+       />
+      <div className='fixed   z-50 flex h-16 w-[100vw] flex-auto items-center justify-between bg-black pe-6 ps-6 font-sans font-medium text-slate-50 md:pe-16 md:ps-16'>
+        <AnimatePresence>
+        <motion.div 
+        initial={{
+          width:'150px',
+          height:'100%',
+          // display:'absolute',
+          // background:'red',
+          // x:'100%',
+          // y:'50%',
+          // scale:5,
+          // transformOrigin:'center'
+        // y: "50vh" 
+        }}
+        // animate={{scale:1}}
+        // transition={{duration:1,delay:'2'}}
+        //  className=' flex justify-center items-center w-[150px] h-[100%] origin-center'
+         >
+
+        </motion.div>
+        </AnimatePresence>
 
         {/* Desktop Device*/}
         <AnimatePresence>

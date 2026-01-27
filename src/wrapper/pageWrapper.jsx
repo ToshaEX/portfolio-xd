@@ -21,9 +21,7 @@ const pageWrapper = (Components, key, isFullHeight = true) =>
           <AnimatePresence key={key} mode='wait'>
             <motion.div
               ref={ref}
-              className={
-                isFullHeight ? 'flex min-h-full bg-gray-200 pt-16' : 'flex bg-gray-200 pt-16'
-              }
+              className={isFullHeight ? 'flex min-h-full bg-gray-200' : 'flex bg-gray-200 pt-16'}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}

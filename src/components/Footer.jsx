@@ -58,7 +58,7 @@ const Footer = () => {
         <ContactMe />
         <Social />
       </div>
-      <div className='pb-10 text-white'>
+      <div className='pb-10 text-white '>
         <span className=' text-zinc-50'>
           {footerText}
           <br />
